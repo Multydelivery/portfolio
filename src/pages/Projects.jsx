@@ -7,6 +7,13 @@ const Projects = () => {
   // Array of project details with image paths, GitHub links, live website links, and descriptions
   const projects = [
     {
+      image: '/react-portfolio/Screenshot 2025-01-29 140504.png',
+      title: 'E-Commerce Website',
+      description: 'E-commerce platform with user authentication, product listing, and cart functionality. Using MERN stack, cloudinary, and Stripe API.',
+      github: 'https://github.com/Multydelivery/melo-store',
+      website: 'https://melo-store-iccy.vercel.app/'
+    },
+    {
       image: '/react-portfolio/images/APOD Nasa.png',
       title: 'NASA APOD Viewer',
       description: 'An app that fetches and displays NASA’s Astronomy Picture of the Day with details and explanations.',
