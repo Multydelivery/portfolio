@@ -11,7 +11,7 @@ const Projects = () => {
       title: 'E-Commerce Website',
       description: 'E-commerce platform with user authentication, product listing, and cart functionality. Using MERN stack, cloudinary, and Stripe API.',
       github: 'https://github.com/Multydelivery/melo-store',
-      website: 'https://melo-store-iccy.vercel.app/'
+      website: 'https://melo-store-iccy.vercel.app/',
     },
     {
       image: '/react-portfolio/images/APOD Nasa.png',
