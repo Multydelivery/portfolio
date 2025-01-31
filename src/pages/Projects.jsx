@@ -7,35 +7,35 @@ const Projects = () => {
   // Array of project details with image paths, GitHub links, live website links, and descriptions
   const projects = [
     {
-      image: '/react-portfolio/Screenshot 2025-01-29 140504.png',
+      image: '/portfolio/Screenshot 2025-01-29 140504.png',
       title: 'E-Commerce Website',
       description: 'E-commerce platform with user authentication, product listing, and cart functionality. Using MERN stack, cloudinary, and Stripe API.',
       github: 'https://github.com/Multydelivery/melo-store',
       website: 'https://melo-store-iccy.vercel.app/',
     },
     {
-      image: '/react-portfolio/images/APOD Nasa.png',
+      image: '/portfolio/images/APOD Nasa.png',
       title: 'NASA APOD Viewer',
       description: 'An app that fetches and displays NASA’s Astronomy Picture of the Day with details and explanations.',
       github: 'https://github.com/Multydelivery/nasa-day-photo',
       website: 'https://nasa-pic-days.netlify.app/',
     },
     {
-      image: '/react-portfolio/images/hvacsolutionsscreenshot.png',
+      image: '/portfolio/images/hvacsolutionsscreenshot.png',
       title: 'HVAC Solutions',
       description: 'A modern HVAC management platform for technicians and customers to streamline service workflows.',
       github: 'https://github.com/Multydelivery/HVAC_Site2_demo',
       website: 'https://hvacsite2demo-c24d7c962450.herokuapp.com/',
     },
     {
-      image: '/react-portfolio/images/pixel-plate-screenshot.png',
+      image: '/portfolio/images/pixel-plate-screenshot.png',
       title: 'Pixel Plate',
       description: 'A creative platform for pixel art and design enthusiasts to showcase and collaborate on projects.',
       github: 'https://github.com/Multydelivery/pix.elplate',
       website: 'https://pixel-plate.netlify.app/',
     },
     {
-      image: '/react-portfolio/images/Screenshot 2024-09-17 160152.png',
+      image: '/portfolio/images/Screenshot 2024-09-17 160152.png',
       title: 'Next Project',
       description: 'A cutting-edge project leveraging the latest in technology to deliver impactful solutions.',
       github: 'https://github.com/Multydelivery/gym-workouts',

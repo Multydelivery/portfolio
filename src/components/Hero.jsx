@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="flex-1 flex flex-col items-center justify-end">
           <div className="relative rounded-full overflow-hidden shadow-lg w-64 h-64 border-4 border-orange-500 hover:scale-110 transition transform">
             <img
-              src="/react-portfolio/images/january2025portfolioimg.JPG"
+              src="/portfolio/images/january2025portfolioimg.JPG"
               alt="Developer"
               className="w-full h-full object-cover object-[50%_50%]"
             />
