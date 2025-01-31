@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "deploy": "vite gh-pages"
   },
-  "homepage": "https://Multydelivery.github.io/react-portfolio",
+  "homepage": "https://Multydelivery.github.io/portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
