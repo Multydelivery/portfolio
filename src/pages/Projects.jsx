@@ -41,6 +41,13 @@ const Projects = () => {
       github: 'https://github.com/Multydelivery/gym-workouts',
       website: 'https://gym-workouts-time.netlify.app/',
     },
+    {
+      image: '/portfolio/images/heromovieflowimg.png',
+      title: 'Movieflow',
+      description: 'A movie discovery platform that allows users to search, filter, and check trending movies using react, appwrite and netlify.',
+      github: 'https://github.com/Multydelivery/movieflow',
+      website: 'https://movieflow.netlify.app/',
+    }
   ];
 
   return (
