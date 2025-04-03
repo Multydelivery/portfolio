@@ -58,7 +58,7 @@ const Projects = () => {
           My <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500">Projects</span>
         </h1>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl">
-          Explore some of the groundbreaking work I've done. Each project showcases creativity, innovation, and futuristic solutions.
+          Explore some of the groundbreaking work I've done. Each project showcases creativity, innovation, and futuristic solutions for your projects.
         </p>
       </div>
 
