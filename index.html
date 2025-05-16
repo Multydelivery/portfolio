@@ -10,18 +10,31 @@
   </head>
   <body>
     <div id="root"></div>
- <!-- Tawk.to Script -->
- <script>
-  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-  (function () {
-    var s1 = document.createElement("script"),
-      s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = "https://embed.tawk.to/676ca953af5bfec1dbe1fd10/1ig07arrf";
-    s1.charset = "UTF-8";
-    s1.setAttribute("crossorigin", "*");
-    s0.parentNode.insertBefore(s1, s0);
-  })();
-</script>
+    
+    <!-- WhatsApp Integration -->
+    <script>
+      // Function to open WhatsApp chat
+      function openWhatsApp() {
+        const phoneNumber = "18135329032"; // Replace with your actual phone number
+        const message = "Hello! I came across your portfolio and would like to chat.";
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+      }
+      
+      // You can call this function from a button click or automatically
+      // For example, you might want to add a floating WhatsApp button in your React app
+    </script>
+    
+    <!-- Alternatively, you can use a simple WhatsApp button -->
+    <a href="https://wa.me/1234567890" 
+       target="_blank" 
+       style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;border-radius:50px;width:60px;height:60px;text-align:center;font-size:30px;box-shadow: 2px 2px 3px #999;z-index:100;display:flex;align-items:center;justify-content:center;"
+       id="whatsapp-button">
+       <i class="fa fa-whatsapp"></i>
+    </a>
+    
+    <!-- Optional: Add Font Awesome for WhatsApp icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
   </body>
 </html>
