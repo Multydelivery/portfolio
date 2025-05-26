@@ -1,99 +1,128 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
-  const [visible, setVisible] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white text-gray-800 flex items-center justify-between px-6 py-4 font-medium w-full fixed top-0 left-0 z-50 shadow-lg">
-      {/* Logo */}
-      <div className="text-2xl font-extrabold">
-        <NavLink to="/" className="text-gray-800 hover:text-cyan-500 transition">
-          <p className="font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-purple-500 border-b-4 border-cyan-500">
-            <span className="text-cyan-500">Felipe</span> Sanz
-          </p>
-        </NavLink>
-      </div>
+    <>
+      {/* Navigation Bar with full background */}
+      <nav className="fixed top-0 left-0 w-full z-50">
+        {/* Main background layer */}
+        <div className="absolute inset-0 bg-gray-900/90 backdrop-blur-md border-b border-gray-700/50 -z-10"></div>
+        
+        {/* Animated gradient overlay */}
+        <div className={`absolute inset-0 bg-gradient-to-r ${
+          isMenuOpen ? 'from-purple-900/20 to-pink-900/20' : 'from-cyan-900/20 to-blue-900/20'
+        } opacity-0 transition-opacity duration-500 ${isMenuOpen ? 'opacity-100' : 'group-hover:opacity-50'} -z-10`}></div>
+        
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-5 -z-10"></div>
 
-      {/* Desktop Menu */}
-      <ul className="hidden sm:flex gap-6">
-        {['HOME', 'ABOUT', 'CONTACT', 'PROJECTS'].map((item, index) => (
-          <li key={index}>
-            <NavLink
-              to={`/${item.toLowerCase()}`}
-              className={({ isActive }) =>
-                `text-lg px-4 py-2 rounded-md transition ${
-                  isActive
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
-                    : 'text-gray-600 hover:text-cyan-500 hover:bg-gray-100'
-                }`
-              }
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-3 relative">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <NavLink 
+              to="/" 
+              className="flex items-center space-x-2 z-10"
+              onClick={() => setIsMenuOpen(false)}
             >
-              {item}
+              <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
+                FUTURE<span className="text-white">DEV</span>
+              </span>
             </NavLink>
-          </li>
-        ))}
-      </ul>
 
-      {/* Mobile Menu Toggle Button */}
-      <button
-        onClick={() => setVisible(!visible)}
-        className="sm:hidden text-2xl text-cyan-500 hover:text-purple-500 focus:outline-none transition"
-        aria-label="Toggle menu"
-      >
-        {visible ? '✖' : '☰'}
-      </button>
-
-      {/* Mobile Menu */}
-      <div
-        className={`fixed top-0 right-0 h-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white z-40 transition-transform duration-500 ${
-          visible ? 'translate-x-0 w-3/4 shadow-2xl' : 'translate-x-full w-0'
-        } rounded-l-lg`}
-      >
-        <div className="flex flex-col h-full p-6 relative">
-          {/* Close Button */}
-          <button
-            onClick={() => setVisible(false)}
-            className="absolute top-4 right-4 text-3xl text-cyan-500 hover:text-purple-500 transition"
-            aria-label="Close menu"
-          >
-            ✖
-          </button>
-
-          {/* Glowing Header */}
-          <div className="mb-8 text-center mt-10">
-            <h1 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-purple-500 tracking-widest drop-shadow-lg">
-              MENU
-            </h1>
-          </div>
-
-          {/* Menu Items */}
-          <ul className="flex flex-col gap-8 mt-4">
-            {['HOME', 'ABOUT', 'CONTACT', 'PROJECTS'].map((item, index) => (
-              <li key={index} className="text-center">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-1 lg:space-x-2 z-10">
+              {['HOME', 'ABOUT', 'PROJECTS', 'CONTACT'].map((item) => (
                 <NavLink
-                  onClick={() => setVisible(false)}
+                  key={item}
                   to={`/${item.toLowerCase()}`}
-                  className="text-2xl font-bold text-gray-300 hover:text-cyan-500 hover:shadow-md hover:bg-gray-800 py-2 px-6 rounded-lg transition-all"
+                  className={({ isActive }) => 
+                    `px-3 py-2 text-sm lg:text-base rounded-md transition-all duration-200 ${
+                      isActive 
+                        ? 'bg-gradient-to-r from-cyan-600/80 to-purple-600/80 text-white shadow-lg'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                    }`
+                  }
                 >
                   {item}
                 </NavLink>
-              </li>
-            ))}
-          </ul>
+              ))}
+            </div>
 
-          {/* Glowing Footer */}
-          <div className="absolute bottom-8 left-0 w-full text-center">
-            <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Felipe Sanz
-            </p>
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden p-2 rounded-md focus:outline-none relative z-10 group"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <div className={`absolute inset-0 rounded-md bg-gradient-to-r ${
+                isMenuOpen ? 'from-pink-500/30 to-purple-500/30' : 'from-cyan-500/30 to-blue-500/30'
+              } opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}></div>
+              <FontAwesomeIcon 
+                icon={isMenuOpen ? faTimes : faBars} 
+                className={`text-xl ${
+                  isMenuOpen ? 'text-pink-400' : 'text-cyan-400'
+                } transition-colors duration-200`}
+              />
+            </button>
           </div>
         </div>
-      </div>
-    </nav>
+
+        {/* Mobile Menu with full background */}
+        <div className={`md:hidden fixed inset-0 transition-all duration-500 ease-in-out transform ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
+          {/* Menu background layers */}
+          <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-lg -z-20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-gray-900 to-pink-900/30 -z-20"></div>
+          <div className="absolute inset-0 bg-grid-pattern opacity-10 -z-20"></div>
+
+          <div className="container mx-auto px-6 py-8 h-full flex flex-col relative">
+            <div className="flex justify-end z-10">
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 rounded-md text-gray-300 hover:text-white focus:outline-none"
+                aria-label="Close menu"
+              >
+                <FontAwesomeIcon icon={faTimes} size="lg" />
+              </button>
+            </div>
+
+            <div className="flex flex-col items-center justify-center flex-1 space-y-8 z-10">
+              {['HOME', 'ABOUT', 'PROJECTS', 'CONTACT'].map((item) => (
+                <NavLink
+                  key={item}
+                  to={`/${item.toLowerCase()}`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={({ isActive }) => 
+                    `text-xl px-6 py-3 rounded-lg transition-all duration-200 w-full text-center ${
+                      isActive
+                        ? 'bg-gradient-to-r from-cyan-600/80 to-purple-600/80 text-white shadow-lg'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                    }`
+                  }
+                >
+                  {item}
+                </NavLink>
+              ))}
+            </div>
+
+            <div className="pb-8 text-center text-gray-500 text-sm z-10">
+              © {new Date().getFullYear()} FUTURE DEV
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Padding spacer */}
+      <div className="h-16 md:h-20"></div>
+    </>
   );
 };
 
 export default NavBar;
-
 
