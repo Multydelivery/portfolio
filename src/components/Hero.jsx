@@ -93,7 +93,7 @@ const Hero = () => {
               to="/contact"
               className="px-6 py-3 sm:px-8 sm:py-4 border-2 border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105 relative group text-sm sm:text-base"
             >
-              <span className="relative z-10">Connect with AI</span>
+              <span className="relative z-10">Connect with Me</span>
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>

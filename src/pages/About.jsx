@@ -63,7 +63,7 @@ const About = () => {
 
             <div className="prose prose-lg text-gray-600 mb-8 max-w-3xl">
               <p className="mb-4">
-                With a <span className="font-semibold text-blue-600">5-year journey</span> in digital creation, I blend technical expertise with artistic vision to build immersive digital experiences. My background spans computer science fundamentals, design principles, and cutting-edge web technologies.
+                With a <span className="font-semibold text-blue-600">3-year journey</span> in digital creation, I blend technical expertise with artistic vision to build immersive digital experiences. My background spans computer science fundamentals, design principles, and cutting-edge web technologies.
               </p>
               <p className="mb-4">
                 As a <span className="font-semibold text-purple-600">full-stack developer</span>, I architect robust systems while crafting pixel-perfect interfaces. My passion lies in bridging the gap between functionality and aesthetics, creating solutions that are as beautiful as they are powerful.

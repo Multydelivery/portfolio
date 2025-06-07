@@ -31,12 +31,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
           <div className="text-center md:text-left">
             <h3 className="text-lg font-medium text-white mb-2">Get In Touch</h3>
-            <p className="text-gray-400">oscarsanz1717@gmail.com</p>
+            <p className="text-gray-400">multydeliverynj@gmail.com</p>
           </div>
           
           <div className="text-center md:text-left">
             <h3 className="text-lg font-medium text-white mb-2">Based In</h3>
-            <p className="text-gray-400">Tampa, Florida</p>
+            <p className="text-gray-400">North, New Jersey</p>
           </div>
           
           <div className="text-center md:text-left">

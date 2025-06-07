@@ -52,6 +52,14 @@ const Projects = () => {
       github: 'https://github.com/Multydelivery/movieflow',
       website: 'https://movieflow.netlify.app/',
       tech: ['React', 'Appwrite', 'Netlify']
+    },
+    {
+      image: 'images/fooddeliveyappportfolioimg.png',
+      title: 'Food Delivery App',
+      description: 'Comprehensive food delivery platform with real-time order tracking, restaurant management, and user-friendly interface.',
+      github: 'https://github.com/Multydelivery/melo-food-delivery',
+      website: 'https://www.melomarket.com.co/',
+      tech: ['React', 'JavaScrip', 'Express', 'MongoDB', 'Node.js', 'stripe', 'Tailwind CSS', 'Axios', 'Cloudinary']
     }
   ];
 
@@ -146,7 +154,8 @@ const Projects = () => {
             <h3 className="text-xl font-bold text-white mb-2">Have a futuristic project in mind?</h3>
             <p className="text-gray-300 mb-4">Let's build something extraordinary together</p>
             <a
-              href="#contact"
+              href="CONTACT"
+              target="_blank"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 transition-all"
             >
               <FontAwesomeIcon icon={faBolt} className="mr-2" />

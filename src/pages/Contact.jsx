@@ -106,7 +106,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-medium text-white">Email</h3>
                     <a href="mailto:oscarsanz1717@gmail.com" className="text-gray-400 hover:text-cyan-400 transition">
-                      oscarsanz1717@gmail.com
+                      multydeliverynj@gmail.com
                     </a>
                   </div>
                 </div>
@@ -137,13 +137,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-white">Location</h3>
-                    <p className="text-gray-400">Tampa, Florida</p>
+                    <p className="text-gray-400">North, New Jersey</p>
                   </div>
                 </div>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden border border-gray-700/50">
                   <iframe
-                    title="Tampa Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112849.08119594811!2d-82.52162899999999!3d27.9941984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2b782b3b9d1e1%3A0xa75f1389af96b463!2sTampa%2C%20FL!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                    title="North New Jersey Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193740.2588294036!2d-74.32723755!3d40.8257629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2ff8a7a9d6717%3A0x3b6b66d5ec90238c!2sNorth%20Jersey!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
                     width="100%"
                     height="200"
                     className="border-0"
