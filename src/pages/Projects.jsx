@@ -154,7 +154,7 @@ const Projects = () => {
             <h3 className="text-xl font-bold text-white mb-2">Have a futuristic project in mind?</h3>
             <p className="text-gray-300 mb-4">Let's build something extraordinary together</p>
             <a
-              href="CONTACT"
+              href="/portfolio/contact"
               target="_blank"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 transition-all"
             >

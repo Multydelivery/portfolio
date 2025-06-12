@@ -31,7 +31,7 @@ const Hero = () => {
 
     const icons = Array.from(orbit.children);
     const radius = 120; // Orbit radius in pixels
-    const centerOffset = 48; // Half the width of the avatar container
+    const centerOffset = 50; // Half the width of the avatar container
     
     let angle = 0;
     const speed = 0.002; // Rotation speed (radians per frame)
