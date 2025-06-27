@@ -1,10 +1,19 @@
-import React from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faBolt, faRocket, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Projects = () => {
   const projects = [
+    {
+      image: '/portfolio/images/autoshop-portfolio-img.png',
+      title: 'AutoShop Web',
+      description: 'Currently developing a comprehensive automotive service and shop management platform with inventory tracking, appointment scheduling, and customer management features.',
+      github: 'https://github.com/Multydelivery/nextjs-mechanic-shop',
+      website: 'https://nextjs-mechanic-shop.vercel.app/',
+      tech: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Stripe', 'Vercel'],
+      isCurrentProject: true
+    },
     {
       image: '/portfolio/Screenshot 2025-01-29 140504.png',
       title: 'E-Commerce Website',
@@ -87,10 +96,27 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2 group"
+              className={`relative backdrop-blur-sm border rounded-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group ${
+                project.isCurrentProject 
+                  ? 'bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border-cyan-400/50 shadow-xl shadow-cyan-500/25' 
+                  : 'bg-gray-800/50 border-gray-700/50 hover:shadow-cyan-500/20'
+              }`}
             >
+              {/* Current project badge */}
+              {project.isCurrentProject && (
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="px-3 py-1 text-xs font-bold bg-gradient-to-r from-cyan-400 to-purple-500 text-white rounded-full shadow-lg">
+                    Currently Working On
+                  </span>
+                </div>
+              )}
+              
               {/* Glowing border effect */}
-              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-cyan-400/30 transition-all duration-500 pointer-events-none"></div>
+              <div className={`absolute inset-0 rounded-xl border border-transparent transition-all duration-500 pointer-events-none ${
+                project.isCurrentProject 
+                  ? 'border-cyan-400/50' 
+                  : 'group-hover:border-cyan-400/30'
+              }`}></div>
               
               {/* Project Image with hover effect */}
               <div className="relative h-48 overflow-hidden">
@@ -153,14 +179,6 @@ const Projects = () => {
           <div className="bg-gray-900/80 rounded-xl px-8 py-6 backdrop-blur-sm">
             <h3 className="text-xl font-bold text-white mb-2">Have a futuristic project in mind?</h3>
             <p className="text-gray-300 mb-4">Let's build something extraordinary together</p>
-            <a
-              href="/portfolio/contact"
-              target="_blank"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 transition-all"
-            >
-              <FontAwesomeIcon icon={faBolt} className="mr-2" />
-              Get In Touch
-            </a>
           </div>
         </div>
       </div>
