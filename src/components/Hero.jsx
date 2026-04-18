@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHtml5,
@@ -9,50 +9,20 @@ import {
   faGithub,
   faNpm,
 } from '@fortawesome/free-brands-svg-icons';
-import { faMicrochip, faRobot, faBrain, faCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
-  const orbitRef = useRef(null);
   const techIcons = [
-    { icon: faHtml5, color: 'text-orange-500', name: 'HTML5', size: 1.2 },
-    { icon: faCss3Alt, color: 'text-blue-500', name: 'CSS3', size: 1.1 },
-    { icon: faJs, color: 'text-yellow-500', name: 'JavaScript', size: 1.3 },
-    { icon: faReact, color: 'text-cyan-500', name: 'React', size: 1.4 },
-    { icon: faNode, color: 'text-green-500', name: 'Node.js', size: 1.2 },
-    { icon: faGithub, color: 'text-gray-300', name: 'GitHub', size: 1.1 },
-    { icon: faDatabase, color: 'text-indigo-500', name: 'Database', size: 1.3 },
-    { icon: faNpm, color: 'text-red-500', name: 'NPM', size: 1.1 },
+    { icon: faHtml5, color: 'text-orange-500', name: 'HTML5' },
+    { icon: faCss3Alt, color: 'text-blue-500', name: 'CSS3' },
+    { icon: faJs, color: 'text-yellow-500', name: 'JavaScript' },
+    { icon: faReact, color: 'text-cyan-500', name: 'React' },
+    { icon: faNode, color: 'text-green-500', name: 'Node.js' },
+    { icon: faGithub, color: 'text-gray-300', name: 'GitHub' },
+    { icon: faDatabase, color: 'text-indigo-500', name: 'Database' },
+    { icon: faNpm, color: 'text-red-500', name: 'NPM' },
   ];
-
-  useEffect(() => {
-    const orbit = orbitRef.current;
-    if (!orbit) return;
-
-    const icons = Array.from(orbit.children);
-    const radius = 120; // Orbit radius in pixels
-    const centerOffset = 50; // Half the width of the avatar container
-    
-    let angle = 0;
-    const speed = 0.002; // Rotation speed (radians per frame)
-    
-    const animate = () => {
-      angle += speed;
-      icons.forEach((icon, i) => {
-        const iconAngle = angle + (i * (2 * Math.PI / icons.length));
-        const x = Math.cos(iconAngle) * radius;
-        const y = Math.sin(iconAngle) * radius;
-        
-        icon.style.transform = `translate(${x}px, ${y}px) scale(${techIcons[i].size})`;
-        icon.style.opacity = 0.7 + (Math.sin(iconAngle) * 0.3);
-      });
-      requestAnimationFrame(animate);
-    };
-    
-    animate();
-    
-    return () => cancelAnimationFrame(animate);
-  }, []);
 
   return (
     <section className="relative bg-gray-900 overflow-hidden">
@@ -99,53 +69,40 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Avatar with orbiting icons */}
+        {/* Avatar with spinning rings */}
         <div className="flex-1 flex flex-col items-center justify-center relative w-full max-w-xs sm:max-w-sm mx-auto">
           <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 group">
-            {/* Hologram base */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/20 to-purple-500/20 blur-lg md:blur-xl animate-pulse-slow"></div>
+            {/* Hologram base - stays fixed */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/20 to-purple-500/20 blur-lg md:blur-xl animate-pulse-slow pointer-events-none"></div>
             
-            {/* Avatar container */}
-            <div className="relative w-full h-full flex items-center justify-center">
-              <div className="absolute inset-0 rounded-full border-2 md:border-4 border-cyan-400/50 animate-spin-slow" style={{ animationDuration: '20s' }}></div>
-              <div className="absolute inset-2 sm:inset-4 rounded-full border-2 md:border-4 border-purple-400/50 animate-spin-slow-reverse" style={{ animationDuration: '25s' }}></div>
-              
-              {/* Avatar image */}
+            {/* Spinning border rings - fixed outside the circle */}
+            <div className="absolute inset-0 rounded-full border-2 md:border-4 border-cyan-400/50 animate-spin-slow pointer-events-none" style={{ animationDuration: '20s' }}></div>
+            <div className="absolute inset-2 sm:inset-4 rounded-full border-2 md:border-4 border-purple-400/50 animate-spin-slow-reverse pointer-events-none" style={{ animationDuration: '25s' }}></div>
+            
+            {/* Avatar image - centered */}
+            <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-5/6 h-5/6 rounded-full overflow-hidden border border-white/20 bg-gray-800/50 backdrop-blur-sm group-hover:backdrop-blur-0 transition-all duration-500">
                 <img
-                  src="/portfolio/images/january2025portfolioimg.JPG"
+                  src="/images/january2025portfolioimg.JPG"
                   alt="Futuristic Developer"
                   className="w-full h-full object-cover mix-blend-lighten"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-cyan-400/10 to-purple-500/10 opacity-70 group-hover:opacity-30 transition-opacity duration-500"></div>
               </div>
             </div>
+          </div>
 
-            {/* Orbiting tech icons */}
-            <div 
-              ref={orbitRef}
-              className="absolute inset-0 flex items-center justify-center"
-            >
-              {techIcons.map((tech, index) => (
-                <div 
-                  key={index}
-                  className={`absolute ${tech.color} text-2xl sm:text-3xl transition-all duration-1000 ease-in-out will-change-transform`}
-                  style={{
-                    width: '24px',
-                    height: '24px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <FontAwesomeIcon 
-                    icon={tech.icon} 
-                    className="hover:scale-125 transition-transform duration-300"
-                    aria-label={tech.name}
-                  />
-                </div>
-              ))}
-            </div>
+          {/* Tech icons below profile */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4 max-w-md">
+            {techIcons.map((tech, index) => (
+              <div 
+                key={index}
+                className={`${tech.color} text-3xl transition-all duration-300 hover:scale-125 hover:brightness-125`}
+                title={tech.name}
+              >
+                <FontAwesomeIcon icon={tech.icon} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

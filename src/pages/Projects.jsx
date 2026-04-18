@@ -6,7 +6,7 @@ import { faBolt, faRocket, faExternalLinkAlt } from '@fortawesome/free-solid-svg
 const Projects = () => {
   const projects = [
     {
-      image: '/portfolio/images/autoshop-portfolio-img.png',
+      image: '/images/autoshop-portfolio-img.png',
       title: 'AutoShop Web',
       description: 'Currently developing a comprehensive automotive service and shop management platform with inventory tracking, appointment scheduling, and customer management features.',
       github: 'https://github.com/Multydelivery/nextjs-mechanic-shop',
@@ -15,7 +15,7 @@ const Projects = () => {
       isCurrentProject: true
     },
     {
-      image: '/portfolio/Screenshot 2025-01-29 140504.png',
+      image: '/Screenshot 2025-01-29 140504.png',
       title: 'E-Commerce Website',
       description: 'Full-featured e-commerce platform with MERN stack, Cloudinary integration, and Stripe payment processing.',
       github: 'https://github.com/Multydelivery/melo-store',
@@ -23,7 +23,7 @@ const Projects = () => {
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe']
     },
     {
-      image: '/portfolio/images/APOD Nasa.png',
+      image: '/images/APOD Nasa.png',
       title: 'NASA APOD Viewer',
       description: 'Interactive gallery showcasing NASA\'s Astronomy Picture of the Day with detailed explanations.',
       github: 'https://github.com/Multydelivery/nasa-day-photo',
@@ -31,7 +31,7 @@ const Projects = () => {
       tech: ['React', 'NASA API', 'Tailwind CSS']
     },
     {
-      image: '/portfolio/images/hvacsolutionsscreenshot.png',
+      image: '/images/hvacsolutionsscreenshot.png',
       title: 'HVAC Solutions',
       description: 'Comprehensive HVAC management system for technicians and customers with service workflow automation.',
       github: 'https://github.com/Multydelivery/HVAC_Site2_demo',
@@ -39,7 +39,7 @@ const Projects = () => {
       tech: ['Express', 'Handlebars', 'MySQL']
     },
     {
-      image: '/portfolio/images/pixel-plate-screenshot.png',
+      image: '/images/pixel-plate-screenshot.png',
       title: 'Pixel Plate',
       description: 'Collaborative pixel art platform with real-time editing and community sharing features.',
       github: 'https://github.com/Multydelivery/pix.elplate',
@@ -47,7 +47,7 @@ const Projects = () => {
       tech: ['React', 'Firebase', 'Canvas API']
     },
     {
-      image: '/portfolio/images/Screenshot 2024-09-17 160152.png',
+      image: '/images/Screenshot 2024-09-17 160152.png',
       title: 'Gym Workouts',
       description: 'AI-powered workout planner with exercise database and personalized training programs.',
       github: 'https://github.com/Multydelivery/gym-workouts',
@@ -55,7 +55,7 @@ const Projects = () => {
       tech: ['Next.js', 'TypeScript', 'AI Integration']
     },
     {
-      image: '/portfolio/images/heromovieflowimg.png',
+      image: '/images/heromovieflowimg.png',
       title: 'MovieFlow',
       description: 'Advanced movie discovery platform with trending analytics and personalized recommendations.',
       github: 'https://github.com/Multydelivery/movieflow',
@@ -63,7 +63,7 @@ const Projects = () => {
       tech: ['React', 'Appwrite', 'Netlify']
     },
     {
-      image: 'images/fooddeliveyappportfolioimg.png',
+      image: '/images/fooddeliveyappportfolioimg.png',
       title: 'Food Delivery App',
       description: 'Comprehensive food delivery platform with real-time order tracking, restaurant management, and user-friendly interface.',
       github: 'https://github.com/Multydelivery/melo-food-delivery',
