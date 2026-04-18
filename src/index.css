@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Ensure smooth scrolling with offset for fixed navbar */
+  html {
+    scroll-padding-top: 5rem; /* 80px to account for fixed navbar */
+  }
+} 

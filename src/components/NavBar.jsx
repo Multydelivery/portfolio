@@ -6,12 +6,15 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleHomeClick = () => {
+  const handleNavClick = () => {
     setIsMenuOpen(false);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    // Small delay to allow route change, then scroll to top
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
   };
 
   return (
@@ -35,7 +38,7 @@ const NavBar = () => {
             <NavLink 
               to="/" 
               className="flex items-center space-x-2 z-10"
-              onClick={handleHomeClick}
+              onClick={handleNavClick}
             >
               <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
                 FUTURE<span className="text-white">DEV</span>
@@ -55,7 +58,7 @@ const NavBar = () => {
                         : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                     }`
                   }
-                  onClick={item === 'HOME' ? handleHomeClick : () => setIsMenuOpen(false)}
+                  onClick={handleNavClick}
                 >
                   {item}
                 </NavLink>
@@ -106,7 +109,7 @@ const NavBar = () => {
                 <NavLink
                   key={item}
                   to={`/${item.toLowerCase()}`}
-                  onClick={item === 'HOME' ? handleHomeClick : () => setIsMenuOpen(false)}
+                  onClick={handleNavClick}
                   className={({ isActive }) => 
                     `text-xl px-6 py-3 rounded-lg transition-all duration-200 w-full text-center ${
                       isActive

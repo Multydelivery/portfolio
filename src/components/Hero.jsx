@@ -25,7 +25,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative bg-gray-900 overflow-hidden">
+    <section id="home" className="relative bg-gray-900 overflow-hidden scroll-mt-20">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 md:opacity-10"></div>

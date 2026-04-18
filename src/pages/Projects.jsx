@@ -73,7 +73,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="relative bg-gray-900 py-20 overflow-hidden">
+    <section id="projects" className="relative bg-gray-900 py-20 overflow-hidden scroll-mt-20">
       {/* Futuristic background elements */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>

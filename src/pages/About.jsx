@@ -26,7 +26,7 @@ const About = () => {
   ];
 
   return (
-    <div className="relative bg-gray-50 min-h-screen flex items-center py-20 overflow-hidden">
+    <div id="about" className="relative bg-gray-50 min-h-screen flex items-center py-20 overflow-hidden scroll-mt-20">
       {/* Futuristic background elements */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
