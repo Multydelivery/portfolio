@@ -39,7 +39,7 @@ const About = () => {
           <div className="lg:w-1/3 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-white shadow-2xl group">
               <img 
-                src="/images/january2025portfolioimg.JPG" 
+                src="/portfolio/images/january2025portfolioimg.JPG" 
                 alt="Felipe Sanz" 
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
               />

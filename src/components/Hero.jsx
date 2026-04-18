@@ -83,7 +83,7 @@ const Hero = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-5/6 h-5/6 rounded-full overflow-hidden border border-white/20 bg-gray-800/50 backdrop-blur-sm group-hover:backdrop-blur-0 transition-all duration-500">
                 <img
-                  src="/images/january2025portfolioimg.JPG"
+                  src="/portfolio/images/january2025portfolioimg.JPG"
                   alt="Futuristic Developer"
                   className="w-full h-full object-cover mix-blend-lighten"
                 />
